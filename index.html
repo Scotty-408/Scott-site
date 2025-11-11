@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scott Anderson Consulting</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- PayPal SDK: sandbox client-id -->
+  <script src="https://www.paypal.com/sdk/js?client-id=BAA0yf68fe_ErOJQUvu3t3hP3Rk0rn0Xqu6ANwh54OcLlpydnJasiNKX5Ne6sQRxywxKCHxMC04pZdT_-U&currency=USD"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <img src="IGT.png" alt="I Got This logo" class="header-logo" />
+        <div class="header-text">
+          <h1>I Got This</h1>
+          <p class="tagline">Home repairs, installs, maintenance, and more</p>
+          <p class="website"><a href="https://igotthissj.com">igotthissj.com</a></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>About</h2>
+      <p>
+        I'm not a professional...and that's a good thing! I treat every job like it's personal, not professional. I'm a DIY freak, and have done minor renovations, appliance installations, security systems, home media integrations, painting, repairs...you name it. Whatever it is you got, I got this!
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Services</h2>
+      <ul class="list">
+        <li>Appliance installation & repair</li>
+        <li>Home multimedia setup</li>
+        <li>Security system installation</li>
+        <li>Minor renovations & improvements</li>
+      </ul>
+      <p class="note">
+        Don’t see exactly what you need? Reach out and we’ll define a scoped engagement that fits.
+      </p>
+    </section>
+
+    <section class="section payment-section">
+      <h2>Secure Payment</h2>
+      <p>
+        Use the PayPal button below to pay for a confirmed engagement or to complete payment for services rendered. You’ll receive
+        an email receipt directly from PayPal.
+      </p>
+
+      <!-- Amount selector (optional simple UI) -->
+      <label for="amount" class="amount-label">Select or enter an amount (USD):</label>
+      <div class="amount-row">
+        <select id="amountPreset">
+          <option value="">Choose preset</option>
+          <option value="75">First hour/on-site assessment – $75</option>
+          <option value="125">+ $50 second hour – $125</option>
+          <option value="175">+ $50 second hour – $175</option>
+        </select>
+        <input
+          type="number"
+          id="amountCustom"
+          placeholder="Or enter custom amount"
+          min="1"
+          step="1"
+        />
+      </div>
+
+  <!-- PayPal button container -->
+  <div id="paypal-button-container"></div>
+      <p class="fine-print">
+        Payments are processed securely by PayPal. No financial information is stored on this site.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <p>
+        To discuss a project, email me at
+        <a href="mailto:igotthissj@pm.me">igotthissj@pm.me</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Scott Anderson. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
