@@ -25,29 +25,26 @@ body {
 }
 
 .header-content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+  display: block;
 }
 
-.header-logo {
-  width: 150px;
-  height: 150px;
-  flex-shrink: 0;
-  border-radius: 0.5rem;
+.header-text.full-width {
+  text-align: left;
 }
 
-.header-text {
-  flex: 1;
-}
-
-.site-header h1 {
+.header-title-image {
   margin: 0 0 0.5rem;
-  font-size: 3rem;
-  font-family: 'Noteworthy', 'Comic Sans MS', cursive;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  word-spacing: 0.3em;
+  max-width: 380px;
+}
+
+.header-title-image .header-wordmark {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid #ffc439;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 0.5rem;
 }
 
 .tagline {
@@ -73,10 +70,13 @@ body {
 
 .section {
   background-color: #ffffff;
-  margin-top: 1.5rem;
   padding: 1.5rem;
   border-radius: 0.75rem;
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+.section + .section {
+  margin-top: 0.5rem;
 }
 
 .section h2 {
@@ -130,6 +130,15 @@ body {
   color: #6b7280;
 }
 
+.payment-error {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff5f5;
+  color: #b91c1c;
+  font-size: 0.95rem;
+}
+
 a {
   color: #2563eb;
   text-decoration: none;
@@ -145,4 +154,24 @@ a:hover {
   text-align: center;
   font-size: 0.9rem;
   color: #6b7280;
+}
+
+/* How I Work section styling: slightly smaller text for dense policy copy */
+.how-i-work {
+  font-size: 0.95rem;
+  color: #334155;
+}
+
+.how-i-work .how-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.how-i-work .how-content h3,
+.how-i-work .how-content h4 {
+  margin-top: 1rem;
+}
+
+.how-contact a {
+  color: #2563eb;
 }

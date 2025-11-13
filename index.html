@@ -3,18 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scott Anderson Consulting</title>
+  <title>I Got This</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- PayPal SDK: sandbox client-id -->
-  <script src="https://www.paypal.com/sdk/js?client-id=BAA0yf68fe_ErOJQUvu3t3hP3Rk0rn0Xqu6ANwh54OcLlpydnJasiNKX5Ne6sQRxywxKCHxMC04pZdT_-U&currency=USD"></script>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
+  />
+  <!-- PayPal SDK: hosted buttons -->
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=BAA0yf68fe_ErOJQUvu3t3hP3Rk0rn0Xqu6ANwh54OcLlpydnJasiNKX5Ne6sQRxywxKCHxMC04pZdT_-U&components=hosted-buttons&enable-funding=venmo&currency=USD"
+  ></script>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <div class="header-content">
-        <img src="IGT.png" alt="I Got This logo" class="header-logo" />
-        <div class="header-text">
-          <h1>I Got This</h1>
+        <div class="header-text full-width">
+          <h1 class="header-title-image">
+            <img
+              src="IGT Header 2.png"
+              alt="I Got This wordmark"
+              class="header-wordmark"
+            />
+          </h1>
           <p class="tagline">Home repairs, installs, maintenance, and more</p>
           <p class="website"><a href="https://igotthissj.com">igotthissj.com</a></p>
         </div>
@@ -46,30 +57,21 @@
     <section class="section payment-section">
       <h2>Secure Payment</h2>
       <p>
-        Use the PayPal button below to pay for a confirmed engagement or to complete payment for services rendered. You’ll receive
+        Use the PayPal button or payment option of your choice below to pay for a confirmed engagement or to complete payment for services rendered. You’ll receive
         an email receipt directly from PayPal.
       </p>
 
-      <!-- Amount selector (optional simple UI) -->
-      <label for="amount" class="amount-label">Select or enter an amount (USD):</label>
-      <div class="amount-row">
-        <select id="amountPreset">
-          <option value="">Choose preset</option>
-          <option value="75">First hour/on-site assessment – $75</option>
-          <option value="125">+ $50 second hour – $125</option>
-          <option value="175">+ $50 second hour – $175</option>
-        </select>
-        <input
-          type="number"
-          id="amountCustom"
-          placeholder="Or enter custom amount"
-          min="1"
-          step="1"
-        />
-      </div>
-
-  <!-- PayPal button container -->
-  <div id="paypal-button-container"></div>
+      <!-- PayPal hosted button -->
+      <div id="paypal-container-WYDBKCFEET6PC"></div>
+      <script>
+        if (window.paypal && paypal.HostedButtons) {
+          paypal
+            .HostedButtons({
+              hostedButtonId: "WYDBKCFEET6PC",
+            })
+            .render("#paypal-container-WYDBKCFEET6PC");
+        }
+      </script>
       <p class="fine-print">
         Payments are processed securely by PayPal. No financial information is stored on this site.
       </p>
@@ -79,14 +81,129 @@
       <h2>Contact</h2>
       <p>
         To discuss a project, email me at
-        <a href="mailto:igotthissj@pm.me">igotthissj@pm.me</a>.
+        <a href="mailto:igotthissj@pm.me">igotthissj@pm.me</a>
       </p>
+    </section>
+
+    <section class="section how-i-work">
+      <h2>How I Work</h2>
+      <div class="how-content">
+        <p class="how-title"><strong>I GOT THIS</strong><br />Handyman Services in Santa Clara County, California</p>
+
+        <h3>About the Service</h3>
+        <p>
+          I GOT THIS provides small-scale handyman services for homeowners and renters in Santa Clara County, California. I focus on “little fixes” and practical repairs in occupied homes — the kinds of jobs that are too small for a full construction crew, but too important to ignore.
+        </p>
+
+        <h4>Typical jobs include:</h4>
+        <ul>
+          <li>Minor drywall patching and paint touch-ups</li>
+          <li>Caulking and sealing around tubs, sinks, and windows</li>
+          <li>Installing or replacing basic hardware (locks, handles, curtain rods, etc.)</li>
+          <li>Simple fixture changes (lights, faucets, showerheads, if existing connections are in good condition)</li>
+          <li>Minor carpentry and home maintenance tasks</li>
+        </ul>
+
+        <h4>Unlicensed California Handyman – Under $1,000 Jobs Only</h4>
+        <p>I operate as an unlicensed handyman under California law. That means:</p>
+        <ul>
+          <li>I only take jobs where the total value of labor and materials does not exceed $1,000 per job; and</li>
+          <li>I do not perform work that requires building permits or specialty licenses.</li>
+        </ul>
+
+        <h4>I do NOT perform:</h4>
+        <ul>
+          <li>Structural changes or major remodeling</li>
+          <li>New circuits, panel work, or complex electrical jobs</li>
+          <li>New plumbing lines or major plumbing alterations</li>
+          <li>Any work that requires building permits or professional design/engineering</li>
+        </ul>
+
+        <p>
+          If your project goes beyond this scope, I’m happy to suggest that you contact a properly licensed contractor.
+        </p>
+
+        <h4>Estimates and Pricing</h4>
+        <p>
+          Most jobs start with a conversation and, when needed, photos of the area to be repaired. For local jobs, I may also do an on-site visit.
+        </p>
+        <ul>
+          <li>You’ll receive a clear description of the proposed work and an estimated price before I begin.</li>
+          <li>Estimates are based on visible conditions. If hidden damage is discovered once work begins, I’ll explain the issue and discuss options and pricing before continuing.</li>
+          <li>For small jobs, I may quote a minimum service charge to cover travel and setup time.</li>
+        </ul>
+
+        <h4>Scheduling and Access</h4>
+        <p>
+          I schedule work in defined arrival windows and do my best to stay on time. Some flexibility is needed, especially if earlier jobs take longer than expected. I’ll communicate any delays as early as possible.
+        </p>
+        <p>Clients are responsible for:</p>
+        <ul>
+          <li>Providing safe access to the property</li>
+          <li>Securing pets and moving fragile or highly valuable items away from the work area</li>
+          <li>Obtaining any necessary approvals from landlords or HOAs</li>
+        </ul>
+
+        <h4>Payments</h4>
+        <p>
+          Payment is due upon completion of the work, unless we’ve agreed otherwise in advance.
+        </p>
+        <p>Most major payment methods accepted through PayPal Business Portal.</p>
+        <p>
+          For larger jobs that approach the $1,000 limit, I may request a reasonable deposit for materials and/or progress payments as work is completed. Any applicable deposits or payment schedules will be clearly stated in your written estimate or confirmation message.
+        </p>
+
+        <h4>Workmanship Warranty</h4>
+        <p>
+          I stand behind my workmanship. For most repair jobs, I provide a limited workmanship warranty for 6 months from the date of completion. This warranty covers defects in the work I performed, not normal wear and tear or product failures.
+        </p>
+        <p>The warranty does not cover:</p>
+        <ul>
+          <li>Normal wear and tear</li>
+          <li>Misuse, neglect, or lack of maintenance</li>
+          <li>Damage caused by unrelated issues (for example, leaks from a roof or plumbing problem I did not work on)</li>
+          <li>Problems caused by products supplied by the client</li>
+        </ul>
+        <p>
+          If you notice a problem with my work during the warranty period, please contact me as soon as possible. I’ll review the issue and, if it’s related to my workmanship, I’ll repair or correct it at no additional labor charge.
+        </p>
+
+        <h4>Cancellations and Rescheduling</h4>
+        <p>
+          Life happens. If you need to cancel or reschedule, please let me know at least 24 hours in advance. Same-day cancellations may be subject to a reasonable fee to cover lost time.
+        </p>
+        <p>
+          If I need to reschedule due to illness, emergencies, or unexpected circumstances, I will notify you as soon as I can and set a new time that works for both of us.
+        </p>
+
+        <h4>Photos and Privacy</h4>
+        <p>
+          I may take before-and-after photos of completed work for documentation and marketing. I do not post identifiable client information, faces, or full addresses. If you prefer that no photos be taken or used, simply let me know before or during the job.
+        </p>
+
+        <h4>Service Area</h4>
+        <p>I primarily serve clients in Santa Clara County.</p>
+        <p>If you are outside this area, I may still be able to help, depending on the size of the job and travel time.</p>
+
+        <h4>Contact</h4>
+        <p>To request an estimate:</p>
+        <p class="how-contact">
+          <strong>I GOT THIS</strong><br />
+          Phone: (408) 334-4273<br />
+          Email: <a href="mailto:igotthissj@pm.me">igotthissj@pm.me</a><br />
+          Online form: <a href="https://www.igotthissj.com">www.igotthissj.com</a>
+        </p>
+
+        <p>
+          Be prepared to include a brief description of your project, your city, and any helpful photos of the area that needs attention.
+        </p>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Scott Anderson. All rights reserved.</p>
+      <p><span id="year"></span> I GOT THIS. All Rights reserved.</p>
     </div>
   </footer>
 
